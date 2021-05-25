@@ -1,6 +1,6 @@
 const app = Vue.createApp({
   data() {
-    return{
+    return {
       titulo: "Este es un ejemplo de VueJS",
       cantidad: 400,
       enlace: 'https://www.youtube.com/watch?v=Ywo9CoI5dtM&ab_channel=ReikReikOfficialArtistChannel',
@@ -11,6 +11,15 @@ const app = Vue.createApp({
         'giros',
         'cheques',
       ]
+    }
+  },
+
+  methods: {
+    adicionSaldo() {
+      this.cantidad = this.cantidad + 100
+    },
+    sustraccionSaldo() {
+      this.cantidad = this.cantidad - 100
     }
   }
 })

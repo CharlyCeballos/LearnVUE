@@ -1,0 +1,15 @@
+const app = Vue.createApp({
+  data() {
+    return{
+      titulo: "Este es un ejemplo de VueJS",
+      cantidad: 400,
+      enlace: 'https://www.youtube.com/watch?v=Ywo9CoI5dtM&ab_channel=ReikReikOfficialArtistChannel',
+      estado: true,
+      servicios: [
+        'transferencias',
+        'pagos',
+        'giros',
+      ]
+    }
+  }
+})

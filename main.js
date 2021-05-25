@@ -20,9 +20,9 @@ const app = Vue.createApp({
       this.cantidad = this.cantidad + 100
     },
     sustraccionSaldo(valor) {
-      if(this.cantidad === 0 || this.cantidad < 0) {
+      if (this.cantidad === 0 || this.cantidad < 0) {
         this.desactivar = true
-        alert ('Saldo insuficiente para su sustracción')
+        alert('Saldo insuficiente para su sustracción')
         return
       }
       this.cantidad = this.cantidad - valor
@@ -30,10 +30,10 @@ const app = Vue.createApp({
   },
 
   computed: {
-    colorCantidad(){
+    colorCantidad() {
       return this.cantidad > 500 ? 'text-success' : 'text-danger'
     },
-    tituloMayusculas(){
+    tituloMayusculas() {
       return this.titulo.toUpperCase()
     },
   }

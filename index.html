@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
   <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
   <div id="app">
     <h1> {{ titulo }}</h1>
@@ -15,21 +17,33 @@
     <a v-bind:href="enlace">Reik con <b>v-bind</b></a>
     </br>
     <a :href="enlace">Reik SIN <b>v-bind</b></a>
+
     <hr>
+
     <h2 v-if="estado">Cuenta activa</h2>
     <h2 v-else="estado">Cuenta desactivada</h2>
+
     <hr>
+
     <h2 v-if="cantidad > 500">Cantidad: {{cantidad}}</h2>
     <h2 v-else-if="cantidad <= 500 && cantidad > 0">
       Cantidad:
       <span style="color:red">{{cantidad}}</span>
     </h2>
     <h2 v-else>Sin cantidad {{cantidad}}</h2>
+
     <hr>
+
     <h2>Mis servicios disponibles:</h2>
     <ul>
       <li v-for="(item, index) in servicios" v-bind:key="index">{{index}}-{{item}}</li>
     </ul>
+
+    <hr>
+
+    <button v-on:click="adicionSaldo">Agregar Centena</button>
+    <button @click="sustraccionSaldo">Restar Centena</button>
+
   </div>
 
   <script src="main.js"></script>
@@ -37,4 +51,5 @@
     const mountedApp = app.mount('#app');
   </script>
 </body>
+
 </html>

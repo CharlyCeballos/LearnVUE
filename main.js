@@ -9,6 +9,7 @@ const app = Vue.createApp({
         'transferencias',
         'pagos',
         'giros',
+        'cheques',
       ]
     }
   }

@@ -10,7 +10,8 @@ const app = Vue.createApp({
         'pagos',
         'giros',
         'cheques',
-      ]
+      ],
+      desactivar: false,
     }
   },
 
@@ -19,6 +20,11 @@ const app = Vue.createApp({
       this.cantidad = this.cantidad + 100
     },
     sustraccionSaldo() {
+      if(this.cantidad === 0) {
+        this.desactivar = true
+        alert ('Saldo insuficiente para su sustracción')
+        return
+      }
       this.cantidad = this.cantidad - 100
     }
   }

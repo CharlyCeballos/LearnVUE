@@ -25,7 +25,7 @@ const app = Vue.createApp({
         alert ('Saldo insuficiente para su sustracción')
         return
       }
-      this.cantidad = this.cantidad - 100
+      this.cantidad = this.cantidad - 100 
     }
   }
 })

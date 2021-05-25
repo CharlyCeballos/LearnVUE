@@ -19,13 +19,13 @@ const app = Vue.createApp({
     adicionSaldo() {
       this.cantidad = this.cantidad + 100
     },
-    sustraccionSaldo() {
-      if(this.cantidad === 0) {
+    sustraccionSaldo(valor) {
+      if(this.cantidad === 0 || this.cantidad < 0) {
         this.desactivar = true
         alert ('Saldo insuficiente para su sustracción')
         return
       }
-      this.cantidad = this.cantidad - 100
+      this.cantidad = this.cantidad - valor
     }
   }
 })

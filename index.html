@@ -50,7 +50,10 @@
     <button v-on:click="adicionSaldo">Agregar Centena</button>
     <button @click="sustraccionSaldo(300)" v-bind:disabled="desactivar">Restar Trecientos</button>
 
-    <footer-Banco />
+    <footer-Banco
+      v-bind:valor="cantidad"
+      fecha="Mayo 2021"
+    ></footer-Banco>
   </div>
 
   <script src="main.js"></script>

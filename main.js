@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       titulo: "Este es un ejemplo de VueJS",
-      cantidad: 400,
+      cantidad: 700,
       enlace: 'https://www.youtube.com/watch?v=Ywo9CoI5dtM&ab_channel=ReikReikOfficialArtistChannel',
       estado: true,
       servicios: [
@@ -19,13 +19,22 @@ const app = Vue.createApp({
     adicionSaldo() {
       this.cantidad = this.cantidad + 100
     },
-    sustraccionSaldo() {
-      if(this.cantidad === 0) {
+    sustraccionSaldo(valor) {
+      if (this.cantidad === 0 || this.cantidad < 0) {
         this.desactivar = true
-        alert ('Saldo insuficiente para su sustracción')
+        alert('Saldo insuficiente para su sustracción')
         return
       }
-      this.cantidad = this.cantidad - 100 
+      this.cantidad = this.cantidad - valor
     }
+  },
+
+  computed: {
+    colorCantidad() {
+      return this.cantidad > 500 ? 'text-success' : 'text-danger'
+    },
+    tituloMayusculas() {
+      return this.titulo.toUpperCase()
+    },
   }
 })
